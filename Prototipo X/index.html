@@ -21,66 +21,101 @@
         </div>
     </header>
 
-    <div class="container-logo"><img id="Logo" class="Logo" src="soy yo rd cpatura.png" alt="Logo Soy yo RD"></div>
-
-    <div class="container-datos-usuario-form">
-        <h2>Datos del Usuario</h2>
-        <form action="">
-            <label for="cedula">Cedula:</label>
-            <input type="text" id="cedula" maxlength="13" required placeholder="Ej.: xxx-xxxxxxx-x">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" placeholder="Ej.: Juan José" required>
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" placeholder="Ej.: Henriquez Perez" required>
-        </form>
+    <div class="container-logo"><img id="Logo" class="Logo" src="soy yo rd cpatura.png" alt="Logo Soy yo RD">
     </div>
 
-    <div class="container-fecha-tramite-form">
-        <h2>Tramite</h2>
-        <form action="">
-            <label for="servicios">Servicios:</label>
-            <select name="servicios" id="servicios">
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select>
-            <label for="insituciones" title="instituciones">Intituciones:</label>
-            <select name="insituciones" title="seleccione las instituciones" id="insituciones" required>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select>
-            <label for="fecha">Fecha  y Hora:</label>
-            <input type="datetime-local" name="fecha-hora" id="fecha-hora" required>
-        </form>
+
+    <div class="container-todo">
+        <div class="container-datos-usuario-form">
+            <h2 class="datos-usuario">Datos del Usuario</h2>
+            <form action="">
+                <label for="cedula">Cedula:</label>
+                <input type="text" id="cedula" maxlength="13" required placeholder="Ej.: xxx-xxxxxxx-x"
+                    onfocus="this.placeholder=''" onblur="this.placeholder='Ej.: xxx-xxxxxxx-x'">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Ej.: Juan José" required>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" placeholder="Ej.: Henriquez Perez" required>
+            </form>
+        </div>
+
+        <div class="container-fecha-tramite-form">
+            <h2 class="tramite">Tramite</h2>
+            <form action="">
+                <label for="insituciones" title="instituciones">Intituciones:</label>
+                <select name="insituciones" title="seleccione las instituciones" id="insituciones" required>
+                    <option value="">SELECCIONE UNA INSTITUCION</option>
+                    <option value="">Procuraduría General de la República (PGR)</option>
+                    <option value="">Dirección General de Pasaportes (DGP)</option>
+                    <option value="">Dirección General de Migración (DGM)</option>
+                    <option value="">Gob Expreso</option>
+                    <option value="">Gob Sambil</option>
+                    <option value="">Gob Mega Centro</option>
+                    <option value="">Gob Colinas Centro</option>
+                    <option value="">Gob Occidental mall</option>
+                    <option value="">Gob San Cristobal</option>
+                    <option value="">Gob Santiago</option>
+                </select>
+                <label for="servicios">Servicios:</label>
+                <select name="servicios" id="servicios">
+                    <option value="">Representación legal del Estado</option>
+                    <option value="">Emisión y renovación de pasaportes</option>
+                    <option value="">Control de entrada y salida del país</option>
+                    <option value="">Persecución del crimen organizado</option>
+                    <option value="">Modificación de datos en pasaportes</option>
+                    <option value="">Expedición de visas y permisos de residencia</option>
+                    <option value="">Atención a víctimas y asistencia legal</option>
+                    <option value="">Expedición de pasaportes de emergencia</option>
+                    <option value="">Regularización de extranjeros</option>
+                    <option value="">Registro de títulos y documentos legales
+                    </option>
+                    <option value="">Deportaciones y repatriaciones</option>
+                    <option value="">#</option>
+                    <option value="">#</option>
+                    <option value="">#</option>
+                    <option value="">#</option>
+                </select>
+                <label for="fecha">Fecha y Hora:</label>
+                <input type="datetime-local" name="fecha-hora" id="fecha-hora" required>
+            </form>
+        </div>
     </div>
+    <div class="container-button">
+        <button type="submit" class="proceder-pago">Siguiente</button>
+    </div>
+
+    <footer class="footer">
+        <div class="container container-footer">
+            <div class="menu-footer">
+                <img class="imagen-gobierno" src="rdf.png" alt="Logo de gobierno de la Republica Dominicana">
+                <div class="container-img">
+                    <img class="imagen-soyyord" src="sy.png" alt="Logo Soy Yo RD">
+                </div>
+                <div class="contact-info">
+                    <p class="title-footer">Conócenos</p>
+                    <span>Oficina Gubernamental de Tecnologías de la Informacion y Comunicación</span>
+                </div>
+
+                <div class="information">
+                    <p class="title-footer">Búscanos</p>
+                    <span>Edificio Coporativo Vista 311,<br> Ave. Rómulo Betancourt #311,<br> Santo Domingo,<br>Republica Dominicana</span>
+                </div>
+
+                <div class="newsletter">
+                    <p class="title-footer">Infórmate</p>
+                    <div class="content">
+                        <ul>
+                            <li><a href="https://soyyord.gob.do/#/terminos">Terminos de Uso</a></li>
+                            <li><a href="https://soyyord.gob.do/#/politicas">Politicas de Privacidad</a></li>
+                            <li><a href="https://soyyord.gob.do/#/preguntas">Preguntas frecuentes</a></li>
+                            <li><a href="https://soyyord.gob.do/#/soporte">Soporte</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </footer>>
 </body>
 
 </html>
