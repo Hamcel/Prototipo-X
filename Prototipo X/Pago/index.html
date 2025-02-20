@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apartado de Pagos</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="bandera">
+            <img src="/img/bandera.pnj.webp" alt="Bandera de Republica Dominicana" />
+        </div>
+        <div class="parrafo header">
+            <p>Esta es una web oficial de la Republica Dominicana</p>
+        </div>
+        <div class="a-header">
+            <a href="#">Así es como puedes saberlo</a>
+        </div>
+    </header>
+
+    <div class="container-logo">
+        <img id="Logo" class="Logo" src="/img/soy yo rd cpatura.png" alt="Logo Soy yo RD" />
+    </div>
+
+    <div class="container-buttom-retroceder">
+        <button type="reset"><a href="/datos-tramite/index.html">Retroceder</a></button>
+    </div>
+
+
+    <div class="container-pago">
+        <h2 class="pago-seguro">Pago Seguro</h2>
+        <form action="">
+            <label for="nombre-titular">Nombre del Titular</label>
+            <input type="text" id="nombre-titular" required placeholder="Ej.: Juan Jose" onfocus="this.placeholder=''" onblur="this.placeholder='Ej.: Juan Jose'">
+            <label for="numero-tarjeta">Numero de Tarjeta</label>
+            <input type="text" id="numero-tarjeta" placeholder="Ej.: XXXX-XXXX-XXXX-XXXX" maxlength="20" required>
+            <label for="fecha-expiracion">Fecha de Expiracion</label>
+            <input type="text" id="fecha-expiracion" placeholder="Ej.: XXX" maxlength="3" required>
+            <label for="CVV">Codigo de seguridad (CVV)</label>
+            <input type="text" id="cvv" placeholder="xxx" maxlength="3" required>
+        </form>
+    </div>
+
+    <div class="container-buttom-proceder">
+        <button type="submit" id="proceder-pago">Proceder</button>
+    </div>
+
+
+    <footer>
+        <div class="container-footer">
+            <div class="conocenos">
+                <h3>CONÓCENOS</h3>
+                <span>Oficina Gubernamental de Tegnologias <br />
+                    de la Información y Comunicación</span>
+            </div>
+
+            <div class="contactanos">
+                <h3>CONTÁCTANOS</h3>
+                <span>Tel:(809)-286-1009 <br />
+                    Fax:(809)-732-5465 info@ogtic.gob.do</span>
+            </div>
+
+            <div class="buscanos">
+                <h3>BÚSCANOS</h3>
+                <span>Edificio Corporativo Vista 311,<br />
+                    Ave. Rómulo Betancourt #311, <br />Santo Domingo, Republica
+                    Dominicana</span>
+            </div>
+
+            <div class="INFORMATE">
+                <h3>INFORMATE</h3>
+                <ul>
+                    <li>
+                        <a href="https://soyyord.gob.do/#/terminos">Terminos de Uso</a>
+                    </li>
+                    <li>
+                        <a href="https://soyyord.gob.do/#/politicas">Politicas de Privacidad</a>
+                    </li>
+                    <li>
+                        <a href="https://soyyord.gob.do/#/preguntas">Preguntas frecuentes</a>
+                    </li>
+                    <li><a href="https://soyyord.gob.do/#/soporte">Soporte</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

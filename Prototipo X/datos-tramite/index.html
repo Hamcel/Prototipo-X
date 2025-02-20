@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartado de Citas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo ogtic.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="bandera">
+            <img src="/img/bandera.pnj.webp" alt="Bandera de Republica Dominicana">
+        </div>
+        <div class="parrafo header">
+            <p>Esta es una web oficial de la Republica Dominicana</p>
+        </div>
+        <div class="a-header">
+            <a href="#">Así es como puedes saberlo</a>
+        </div>
+    </header>
+
+    <div class="container-logo"><img id="Logo" class="Logo" src="/img/soy yo rd cpatura.png" alt="Logo Soy yo RD">
+    </div>
+
+
+    <div class="container-todo">
+        <div class="container-datos-usuario-form">
+            <h2 class="datos-usuario">Datos del Usuario</h2>
+            <form action="">
+                <label for="cedula">Cedula:</label>
+                <input type="text" id="cedula" maxlength="13" required placeholder="Ej.: xxx-xxxxxxx-x"
+                    onfocus="this.placeholder=''" onblur="this.placeholder='Ej.: xxx-xxxxxxx-x'">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Ej.: Juan José" required>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" placeholder="Ej.: Henriquez Perez" required>
+            </form>
+        </div>
+
+        <div class="container-fecha-tramite-form">
+            <h2 class="tramite">Tramite</h2>
+            <form action="">
+                <label for="insituciones" title="instituciones">Intituciones:</label>
+                <select name="insituciones" title="seleccione las instituciones" id="insituciones" required>
+                    <option value="">SELECCIONE UNA INSTITUCION</option>
+                    <option value="">Procuraduría General de la República (PGR)</option>
+                    <option value="">Dirección General de Pasaportes (DGP)</option>
+                    <option value="">Dirección General de Migración (DGM)</option>
+                    <option value="">Gob Expreso</option>
+                    <option value="">Gob Sambil</option>
+                    <option value="">Gob Mega Centro</option>
+                    <option value="">Gob Colinas Centro</option>
+                    <option value="">Gob Occidental mall</option>
+                    <option value="">Gob San Cristobal</option>
+                    <option value="">Gob Santiago</option>
+                </select>
+                <label for="servicios">Servicios:</label>
+                <select name="servicios" id="servicios">
+                    <option value="">Representación legal del Estado</option>
+                    <option value="">Emisión y renovación de pasaportes</option>
+                    <option value="">Control de entrada y salida del país</option>
+                    <option value="">Persecución del crimen organizado</option>
+                    <option value="">Modificación de datos en pasaportes</option>
+                    <option value="">Expedición de visas y permisos de residencia</option>
+                    <option value="">Atención a víctimas y asistencia legal</option>
+                    <option value="">Expedición de pasaportes de emergencia</option>
+                    <option value="">Regularización de extranjeros</option>
+                    <option value="">Registro de títulos y documentos legales
+                    </option>
+                    <option value="">Deportaciones y repatriaciones</option>
+                    <option value="">#</option>
+                    <option value="">#</option>
+                    <option value="">#</option>
+                    <option value="">#</option>
+                </select>
+                <label for="fecha">Fecha y Hora:</label>
+                <input type="datetime-local" name="fecha-hora" id="fecha-hora" required>
+            </form>
+        </div>
+    </div>
+    <div class="container-button">
+        <button type="submit" class="proceder-pago"><a href="/Pago/index.html">Siguiente</a></button>
+    </div>
+
+    <footer>
+        <div class="container-footer">
+            <div class="conocenos">
+                <h3>CONÓCENOS</h3>
+                <span>Oficina Gubernamental de Tegnologias <br> de la Información y Comunicación</span>
+            </div>
+
+            <div class="contactanos">
+                <h3>CONTÁCTANOS</h3>
+                <SPAN>Tel:(809)-286-1009 <br> Fax:(809)-732-5465 info@ogtic.gob.do</SPAN>
+            </div>
+
+            <div class="buscanos">
+                <h3>BÚSCANOS</h3>
+                <span>Edificio Corporativo Vista 311,<br> Ave. Rómulo Betancourt #311, <br>Santo Domingo, Republica Dominicana</span>
+            </div>
+
+            <div class="INFORMATE">
+                <h3>INFORMATE</h3>
+                <ul>
+                    <li><a href="https://soyyord.gob.do/#/terminos">Terminos de Uso</a></li>
+                    <li><a href="https://soyyord.gob.do/#/politicas">Politicas de Privacidad</a></li>
+                    <li><a href="https://soyyord.gob.do/#/preguntas">Preguntas frecuentes</a></li>
+                    <li><a href="https://soyyord.gob.do/#/soporte">Soporte</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
