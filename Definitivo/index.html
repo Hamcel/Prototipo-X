@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Trámite</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="banner">
+        <div class="gov-banner">
+            <span>🇩🇴 Esta es una web oficial del Gobierno de la República Dominicana</span>
+            <a href="#">Así es como puedes saberlo</a>
+        </div>
+        <div class="logo-container">
+            <img src="/img/soy yo rd cpatura.png" alt="Logo SOY YO RD">
+            <img src="img/logo_ogtic-removebg-preview.png" alt="Logo OGTIC">
+            <a href="https://soyyord.gob.do/#/soporte">Soporte</a>
+            <a href="https://soyyord.gob.do/#/preguntas">Preguntas Frecuentes</a>
+        </div>
+        <div class="welcome-text">
+            <h2>¡Bienvenido!</h2>
+            <p>Esta es la plataforma de citas del Gobierno de la República Dominicana. Aquí puedes gestionar tus trámites de manera rápida y sencilla, sin largas filas ni complicaciones. ¡Facilitamos tu acceso a los servicios públicos!</p>
+            <div class="line"></div>
+            <h2>Información sobre el apartado de citas</h2>
+            <p>En esta sección puedes programar una cita para realizar trámites en diversas instituciones del Estado. Solo debes completar tus datos personales, seleccionar la institución y el servicio que necesitas, y elegir la fecha y hora de tu cita. Recibirás una confirmación por correo electrónico con los detalles de tu solicitud.</p>
+        </div>
+    </header>
+
+    <main class="form-container">
+        <div class="form-section">
+            <h2>Datos Personales</h2>
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" placeholder="Ingrese su cédula">
+            
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Ingrese su nombre">
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" placeholder="Ingrese su apellido">
+        </div>
+
+        <div class="form-section">
+            <h2>Trámite</h2>
+            <label for="institucion">Institución:</label>
+            <select id="institucion">
+                <option>Seleccione la institución</option>
+                <option>Procuraduría General de la República (PGR)</option>
+                <option>Dirección General de Pasaportes (DGP)</option>
+                <option>Dirección General de Migración (DGM)</option>
+                <option>Gob Expreso</option>
+                <option>Gob Sambil</option>
+                <option>Gob Mega Centro</option>
+                <option>Gob Colinas Centro</option>
+                <option>Gob Occidental mall</option>
+                <option>Gob San Cristobal</option>
+                <option>Gob Santiago</option>
+            </select>
+
+            <label for="servicio">Servicio:</label>
+            <select id="servicio">
+                <option>Seleccione el servicio</option>
+                <option>Certificación de Buena Conducta</option>
+                <option>Solicitud de Pasaporte</option>
+                <option>Residencias</option>
+                <option>Certificación de Firmas de Documentos Notariales y Oficiales</option>
+                <option>Renovación de Pasaporte</option>
+                <option>Permisos</option>
+                <option>Registro y Actualización de Firmas</option>
+                <option>Certificaciones (Emisión de certificaciones relacionadas con el estatus y autenticidad de pasaportes)</option>
+                <option>Certificaciones (Documentación oficial que valida el estatus migratorio de extranjeros o certifica movimientos migratorios)</option>
+                <option>Consulta y Pago de Infracciones de Tránsito</option>
+                <option>Renovaciones</option>
+                <option>Atención a Víctimas</option>
+                <option>Denuncias en Línea</option>
+            </select>
+
+            <label for="fecha">Fecha y Hora:</label>
+            <input type="date" id="fecha">
+            <input type="time" id="hora">
+        </div>
+    </main>
+
+</body>
+</html>
