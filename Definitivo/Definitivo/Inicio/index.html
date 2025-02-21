@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Trámite</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="banner">
+        <div class="gov-banner">
+            <span>🇩🇴 Esta es una web oficial del Gobierno de la República Dominicana</span>
+            <a href="#">Así es como puedes saberlo</a>
+        </div>
+        <div class="logo-container">
+            <img src="/img/soy yo rd cpatura.png" alt="Logo SOY YO RD">
+            <img src="img/logo_ogtic-removebg-preview.png" alt="Logo OGTIC">
+        </div>
+
+        <div class="welcome-text">
+            <h2>¡Bienvenido!</h2>
+            <p>Esta es la plataforma de citas del Gobierno de la República Dominicana. Aquí puedes gestionar tus
+                trámites de manera rápida y sencilla, sin largas filas ni complicaciones. ¡Facilitamos tu acceso a los
+                servicios públicos!</p>
+            <div class="line"></div>
+            <h2>Información sobre el apartado de citas</h2>
+            <p>En esta sección puedes programar una cita para realizar trámites en diversas instituciones del Estado.
+                Solo debes completar tus datos personales, seleccionar la institución y el servicio que necesitas, y
+                elegir la fecha y hora de tu cita. Recibirás una confirmación por correo electrónico con los detalles de
+                tu solicitud.</p>
+        </div>
+    </header>
+
+    <main class="form-container">
+        <div class="form-section">
+            <h2>Datos Personales</h2>
+            <div class="linea-bottom"></div>
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" placeholder="Ingrese su cédula" maxlength="13" required>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Ingrese su nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" placeholder="Ingrese su apellido" required>
+
+            <label for="email">Correo Email:</label>
+            <input type="email" id="email" placeholder="Ingrese su email" required>
+
+            <label for="pais">Seleccione país:</label>
+            <select id="pais">
+                <option value="RD">República Dominicana (+1)</option>
+                <option value="US">Estados Unidos (+1)</option>
+            </select>
+
+            <label for="telefono">Número de Teléfono:</label>
+            <input type="text" id="telefono" placeholder="Ingrese su número" maxlength="14">
+        </div>
+
+        <div class="form-section">
+            <h2 class="1">Trámite</h2>
+            <label for="institucion">Institución:</label>
+            <select id="institucion" onchange="filtrarServicios()">
+                <option value="">Seleccione la institución</option>
+                <option value="PGR">Procuraduría General de la República (PGR)</option>
+                <option value="DGP">Dirección General de Pasaportes (DGP)</option>
+                <option value="DGM">Dirección General de Migración (DGM)</option>
+                <option value="GOB">Gob Expreso</option>
+                <option value="GOB">Gob Sambil</option>
+                <option value="GOB">Gob Mega Centro</option>
+                <option value="GOB">Gob Colinas Centro</option>
+                <option value="GOB">Gob Occidental mall</option>
+                <option value="GOB">Gob San Cristobal</option>
+                <option value="GOB">Gob Santiago</option>
+            </select>
+
+            <label for="service">Servicio:</label>
+            <select id="service" disabled>
+                <option>Seleccione el servicio</option>
+                <option data-inst="PGR" value="certificacion-buena-conducta">Certificación de Buena Conducta</option>
+                <option data-inst="DGP" value="solicitud-pasaporte">Solicitud de Pasaporte</option>
+                <option data-inst="DGM" value="residencias">Residencias</option>
+                <option data-inst="PGR" value="certificacion-citas">Certificación de Firmas de Documentos Notariales y
+                    Oficiales</option>
+                <option data-inst="DGP" value="renovacion-pasaportes">Renovación de Pasaporte</option>
+                <option data-inst="DGM" value="permisos">Permisos</option>
+                <option value="registro-firmas">Registro y Actualización de Firmas</option>
+                <option data-inst="DGP" value="certificaciones-emisión">Certificaciones (Emisión de certificaciones
+                    relacionadas con el estatus y autenticidad de
+                    pasaportes)</option>
+                <option data-inst="DGM" value="certificaciones Documentación oficial">Certificaciones (Documentación
+                    oficial que valida el estatus migratorio de extranjeros o
+                    certifica movimientos migratorios)</option>
+                <option data-inst="" value="consulta-pago">Consulta y Pago de Infracciones de Tránsito</option>
+                <option data-inst="GOB" value="renovaciones">Renovaciones</option>
+                <option data-inst="DGP" value="atencion-victimas">Atención a Víctimas</option>
+                <option data-inst="GOB" value="denuncias-linea">Denuncias en Línea</option>
+            </select>
+
+            <label for="date">Fecha (Recomendada):</label>
+            <input type="text" id="date" disabled>
+
+            <label for="time">Hora (Recomendada):</label>
+            <input type="text" id="time" disabled>
+
+            <p id="manual-option" style="color: blue; cursor: pointer; text-decoration: underline;">
+                Si desea cambiar la fecha y el horario manualmente, haga clic aquí
+            </p>
+
+            <div id="manual-container" style="display: none;">
+                <label for="manual-date">Seleccione una nueva fecha:</label>
+                <input type="date" id="manual-date">
+            
+                <label for="manual-time">Seleccione un nuevo horario:</label>
+                <input type="time" id="manual-time">
+            </div>
+
+            <p id="price">Precio: -</p>
+    </main>
+
+    <div class="payment-container" id="paymentContainer">
+        <h2>Selecciona tu método de pago</h2>
+
+        <div class="payment-methods">
+            <label>
+                <input type="radio" name="payment" value="tarjeta" required> 💳 Tarjeta de Crédito / Débito
+            </label>
+            <label>
+                <input type="radio" name="payment" value="paypal" required> 🅿️ PayPal
+            </label>
+            <label>
+                <input type="radio" name="payment" value="presencial" required> 🏢 Pago Presencial
+            </label>
+        </div>
+
+        <!-- Contenedor de formulario de pago -->
+        <div id="paymentDetails"></div>
+
+        <button id="payButton" type="submit">Pagar</button>
+        <button id="backButton" style="display: none;">⬅️ Volver</button>
+    </div>
+
+    <footer>
+        <div class="container-footer">
+            <div class="conocenos">
+                <h3>CONÓCENOS</h3>
+                <span>Oficina Gubernamental de Tegnologias <br> de la Información y Comunicación</span>
+            </div>
+
+            <div class="contactanos">
+                <h3>CONTÁCTANOS</h3>
+                <SPAN>Tel:(809)-286-1009 <br> Fax:(809)-732-5465 info@ogtic.gob.do</SPAN>
+            </div>
+
+            <div class="buscanos">
+                <h3>BÚSCANOS</h3>
+                <span>Edificio Corporativo Vista 311,<br> Ave. Rómulo Betancourt #311, <br>Santo Domingo, Republica
+                    Dominicana</span>
+            </div>
+
+            <div class="INFORMATE">
+                <h3>INFORMATE</h3>
+                <ul>
+                    <li><a href="#">Terminos de Uso</a></li>
+                    <li><a href="#">Politicas de Privacidad</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Soporte</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
